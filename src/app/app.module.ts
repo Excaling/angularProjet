@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import {BorderCardDirective } from './border-card.directive';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, BorderCardDirective
   ],
   imports: [
     BrowserModule

@@ -22,7 +22,7 @@ export const TOOLS: Tool[] = [
     {
         id: 3,
         name: "Metasploit",
-        type: ["Exploitation"],
+        type: ["Exploitation", "OSINT"],
         operatingSystem: "Linux / Windows",
         author: "RapidShare",
         image: "https://www.kilianver.net/wp-content/uploads/2018/03/01_metasploit_icon-300x300.png"
