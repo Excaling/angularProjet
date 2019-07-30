@@ -16,7 +16,9 @@
             <div class="card-stacked">
               <div class="card-content">
                 <p>{{ tool.name }}</p>
-                <p><small>{{ tool.author }}</small></p>
+                <p class="tl-author">author: {{ tool.author }}</p>
+                <!-- Utilisation des pipes -->
+                <p><small>{{ tool.added | date: "M/d/yy ,h:mm a" }}</small></p>
               </div>
             </div>
           </div>

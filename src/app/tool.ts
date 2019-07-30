@@ -7,4 +7,5 @@ export class Tool{
     operatingSystem: string;
     author: string;
     image: string;
+    added: Date;
 }
