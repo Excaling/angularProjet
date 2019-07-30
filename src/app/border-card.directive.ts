@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input , Renderer2} from '@angular/core';
 
 //HostListener sert à catch des elements 
 
@@ -13,9 +13,11 @@ export class BorderCardDirective {
     private defaultColor: string = "#009688";
     private defaultHeight: number = 180;
 
-	constructor(private el: ElementRef) { //Acces a l'element du dom via le constructeur 
+	constructor(private el: ElementRef, private renderer: Renderer2) { //Acces a l'element du dom via le constructeur 
 		this.setBorder(this.initialColor);
-		this.setHeight(this.defaultHeight);
+        this.setHeight(this.defaultHeight);
+        this.renderer.setStyle(this.el.nativeElement, 'height', 'auto');
+        this.renderer.setStyle(this.el.nativeElement, 'width', 'auto');
 	}
 
     @Input('tlBorderCard') borderColor: string;
@@ -31,7 +33,8 @@ export class BorderCardDirective {
 
 	private setBorder(color: string) {
 		let border = 'solid 4px ' + color;
-		this.el.nativeElement.style.border = border;
+        //this.el.nativeElement.style.border = border;
+        this.renderer.setStyle(this.el.nativeElement, 'border', border) ;
 	}
 
 	private setHeight(height: number) {

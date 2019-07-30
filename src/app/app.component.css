@@ -1,3 +1,8 @@
 .tl-author{
     font-style: italic;
 }
+
+.card .horizontal {
+   height: auto;
+   width: auto;
+}

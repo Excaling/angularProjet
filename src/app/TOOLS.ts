@@ -24,7 +24,7 @@ export const TOOLS: Tool[] = [
     {
         id: 3,
         name: "Metasploit",
-        type: ["Exploitation", "OSINT"],
+        type: ["Exploitation", "OSINT", "Fingerprinting"],
         operatingSystem: "Linux / Windows",
         author: "RapidShare",
         image: "https://www.kilianver.net/wp-content/uploads/2018/03/01_metasploit_icon-300x300.png",
@@ -47,6 +47,15 @@ export const TOOLS: Tool[] = [
         operatingSystem: "Linux",
         author: "X0rg",
         image: "https://camo.githubusercontent.com/81a2090387f63d4fd1559912501e30c6cb58fef9/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3830302f312a4b75686644725f32624f4a3743504f7a56586e774c412e706e67",
+        added: new Date()
+    },
+    {
+        id: 6,
+        name: "PowerSploit",
+        type: ["Exploitation", "Maintaining Acces"],
+        operatingSystem:"Linux",
+        author: "PowerShellMafia",
+        image: "http://2.bp.blogspot.com/-0nTle6JQTp0/UVPEYm85P0I/AAAAAAAAA1k/0QGCBswgzTc/s1600/command.PNG",
         added: new Date()
     }
 
