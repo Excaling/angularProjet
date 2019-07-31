@@ -9,7 +9,7 @@ import {Router } from '@angular/router';
 @Component({
   selector: 'list-tool',
   templateUrl: './list.tool.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['../app.component.css']
 })
 export class ListToolComponent implements OnInit {
   title = 'Tools hacking';

@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 
-import { Tool } from './tool';
-import { TOOLS } from './TOOLS';
 
 @Component({
   selector: 'app-root',
