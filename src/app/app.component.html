@@ -1,49 +1,15 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<h1 class="center">
-  Welcome to {{ title }}!
-</h1>  
-
-<div class="container">
-    <p>In this website: i'll present you my hackings tools</p>
-    <h1>List of tools</h1>
-  <div class="row">
-      <div *ngFor="let tool of toolsList" class="col s6 m4" >
-          <div class="card horizontal" (click)="onDisplayTool(tool)" [tlBorderCard]="'red'" >
-            <div class="card-image">
-              <img [src]="tool.image"/>
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>{{ tool.name }}</p>
-                <span *ngFor="let typeT of tool.type" class="{{ typeT | toolTypeColor}}" tlTextTypeColor >
-                  <p>{{ typeT }}</p>
-                </span>
-                <p class="tl-author"><small>author: {{ tool.author }}</small> </p>
-                <!-- Utilisation des pipes -->
-                <p><small>{{ tool.added | date: "M/d/yy ,h:mm a" }}</small></p>
-                
-              </div>
-            </div>
-          </div>
-      </div>
-     
+<nav>
+  <div class="nav-wrapper red darken-1">
+    <a href="#" class="brand-logo center">Tools </a>
   </div>
+</nav>
+<router-outlet></router-outlet>
+
+<footer class="page-footer red darken-1"> 
   
-</div>
-
-<!-- <button (click)="onClick()">Clique!!!</button>
-<input #box (keyup)="onKey(box.value)">
-<p>{{ value }}</p> 
-
-
-<input #box (keyup.enter)="values = box.value" (blur) = "values = box.value">
-<p>{{ values }}</p>
-
-<p *ngIf='age > 18'> PEGI 18 ISSOU</p>
- <ul>
-      <li *ngFor="let tool of toolsList"> 
-        {{tool.name}}
-      </li>
-      </ul>
--->
+  <div class="footer-copyright red darken-1">
+    <div class="container red darken-1">
+    © 2019 Copyright Excaling
+    </div>
+  </div>
+</footer>

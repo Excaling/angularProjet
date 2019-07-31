@@ -1,0 +1,40 @@
+<div *ngIf="tool" class="row">
+    <div class="col s12 m8 offset-m2">
+    <h2 class="header center">{{ tool.name }}</h2>
+    <div class="card horizontal hoverable">
+      <div class="card-image">
+        <img [src]="tool.image">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <table class="bordered striped">
+            <tbody>
+              <tr>
+                <td>Nom</td>
+                <td><strong>{{ tool.name }}</strong></td>
+              </tr>
+              <tr>
+                <td>Auteur</td>
+                <td><strong>{{ tool.author }}</strong></td>
+              </tr>
+              <tr>
+                <td>Types</td>
+                <td>
+                  <span *ngFor="let type of tool.type" class="{{ type | toolTypeColor }}" tlTextTypeColor>{{ type }}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Date de création</td>
+                <td><em>{{ tool.added | date:"dd/MM/yyyy" }}</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-action">
+          <a (click)="goBack()">Retour</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <h4 *ngIf='!tool' class="center">Aucun tool à afficher !</h4>
