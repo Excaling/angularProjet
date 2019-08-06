@@ -19,4 +19,10 @@ export class ToolsService{
         }
     }
 
+
+    getToolTypes(): string[]{
+        let type = ["Exploitation", "OSINT", "Fingerprinting", "PostExploitation"];
+        return type;
+    }
+
 }

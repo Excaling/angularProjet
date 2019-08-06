@@ -11,19 +11,26 @@ import {ToolTypeColorPipe} from './tool-type-color.pipe';
 import {ToolRoutingModule} from './tool-routing.module';
 
 import { ToolsService } from './tools.service';
+import { FormsModule } from '@angular/forms';
+import { EditToolComponent } from './edit-tool.component';
+import { ToolFormComponent } from './tool-form.component';
 
 @NgModule(
     {
         imports: [
             CommonModule, 
-            ToolRoutingModule
+            ToolRoutingModule,
+            FormsModule
         ],
 
         declarations:[ListToolComponent, 
             DetailToolComponent, 
             BorderCardDirective, 
             ToolTypeColorPipe, 
-            TextTypeColor],
+            TextTypeColor,
+            EditToolComponent,
+            ToolFormComponent
+            ],
 
         providers: [ ToolsService ] //Declaration des services du modules
     }

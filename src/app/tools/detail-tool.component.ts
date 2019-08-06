@@ -25,5 +25,8 @@ export class DetailToolComponent implements OnInit {
         
         //window.history.back();
 	}
+	goEdit(tool: Tool): void{
+		this.router.navigate(['/tool/edit/' + tool.id]);
+	}
 
 }
