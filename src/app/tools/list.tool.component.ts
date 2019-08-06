@@ -5,6 +5,7 @@ import { Tool } from './tool';
 import { TOOLS } from './TOOLS';
 
 import {Router } from '@angular/router';
+import { ToolsService } from './tools.service'
 
 @Component({
   selector: 'list-tool',
@@ -13,17 +14,16 @@ import {Router } from '@angular/router';
 })
 export class ListToolComponent implements OnInit {
   title = 'Tools hacking';
-  private toolsList: Tool[];
-  private value: string;
-  private values: string = '';
+  toolsList: Tool[];
+  
+  age: number = 12; 
 
-  private age: number = 12; 
-
-  constructor(private router: Router){}
+  constructor(private router: Router, private pToolsService: ToolsService){
+    
+  }
 
   ngOnInit(){
-    this.toolsList = TOOLS;
-    this.value = null;
+    this.toolsList = this.pToolsService.getTools();
   }
 
   onDisplayTool(pTool: Tool){

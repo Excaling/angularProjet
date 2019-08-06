@@ -9,6 +9,9 @@ import {BorderCardDirective } from './border-card.directive';
 import { TextTypeColor } from './color-text-type.directive';
 import {ToolTypeColorPipe} from './tool-type-color.pipe';
 import {ToolRoutingModule} from './tool-routing.module';
+
+import { ToolsService } from './tools.service';
+
 @NgModule(
     {
         imports: [
@@ -22,7 +25,7 @@ import {ToolRoutingModule} from './tool-routing.module';
             ToolTypeColorPipe, 
             TextTypeColor],
 
-        providers: [] //Declaration des services du modules
+        providers: [ ToolsService ] //Declaration des services du modules
     }
 )
 export class ToolsModule{}

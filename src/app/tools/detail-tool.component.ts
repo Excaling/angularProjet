@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Tool } from './tool';
 import { TOOLS } from './TOOLS';
+import { ToolsService } from './tools.service';
 
 @Component({
 	selector: 'detail-tool',
@@ -9,20 +10,14 @@ import { TOOLS } from './TOOLS';
 })
 export class DetailToolComponent implements OnInit {
 
-	tools: Tool[] = null;
 	tool: Tool = null;
 
-	constructor(private route: ActivatedRoute, private router: Router) {}
+	constructor(private route: ActivatedRoute, private router: Router,private toolsService : ToolsService) {}
     //route permet de get les params, et routeur permet de faire de redirections  vers une route
 	ngOnInit(): void {
-		this.tools = TOOLS;
 
 		let id = +this.route.snapshot.paramMap.get('id'); //snapshot synchrone (le + set de cast en integer)
-		for (let i = 0; i < this.tools.length; i++) {
-			if (this.tools[i].id == id) {
-				this.tool = this.tools[i];
-			}
-		}
+		this.tool = this.toolsService.getTool(id);
 	}
 
 	goBack(): void {
