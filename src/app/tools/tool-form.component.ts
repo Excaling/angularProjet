@@ -60,8 +60,13 @@ export class ToolFormComponent implements OnInit{
 	// La méthode appelée lorsque le formulaire est soumis.
 	onSubmit(): void {
 		console.log("Submit form !");
-		let link = ['/tool', this.tool.id];
-		this.router.navigate(link);
+		this.toolService.updateTool(this.tool).subscribe(x => this.goBack());
+		
+	}
+	goBack():void{
+	let link = ['/tool', this.tool.id];
+	this.router.navigate(link);
+
 	}
 
 }

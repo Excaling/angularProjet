@@ -17,7 +17,7 @@ export class DetailToolComponent implements OnInit {
 	ngOnInit(): void {
 
 		let id = +this.route.snapshot.paramMap.get('id'); //snapshot synchrone (le + set de cast en integer)
-		this.tool = this.toolsService.getTool(id);
+		this.toolsService.getTool(id).subscribe(toolObs => this.tool = toolObs);
 	}
 
 	goBack(): void {
@@ -28,5 +28,7 @@ export class DetailToolComponent implements OnInit {
 	goEdit(tool: Tool): void{
 		this.router.navigate(['/tool/edit/' + tool.id]);
 	}
-
+	delete(tool: Tool): void{
+		this.toolsService.deleteTool(tool).subscribe(() => this.goBack());
+	}
 }

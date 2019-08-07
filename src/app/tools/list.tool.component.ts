@@ -23,7 +23,11 @@ export class ListToolComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.toolsList = this.pToolsService.getTools();
+    this.getTools();
+  }
+
+  getTools(){
+    this.pToolsService.getTools().subscribe(tools => this.toolsList = tools);
   }
 
   onDisplayTool(pTool: Tool){

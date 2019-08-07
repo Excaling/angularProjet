@@ -23,7 +23,7 @@ export class EditToolComponent implements OnInit {
 
   ngOnInit(): void {
     let id = +this.route.snapshot.params['id'];
-    this.tool = this.toolService.getTool(id);
+    this.toolService.getTool(id).subscribe(tl => this.tool = tl);
   }
 
 }

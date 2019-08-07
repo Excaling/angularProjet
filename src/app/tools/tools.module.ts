@@ -14,6 +14,9 @@ import { ToolsService } from './tools.service';
 import { FormsModule } from '@angular/forms';
 import { EditToolComponent } from './edit-tool.component';
 import { ToolFormComponent } from './tool-form.component';
+import { SearchToolComponent } from './search-tool.component';
+import { LoaderComponent } from '../loader';
+
 
 @NgModule(
     {
@@ -29,7 +32,9 @@ import { ToolFormComponent } from './tool-form.component';
             ToolTypeColorPipe, 
             TextTypeColor,
             EditToolComponent,
-            ToolFormComponent
+            ToolFormComponent, 
+            SearchToolComponent,
+            LoaderComponent
             ],
 
         providers: [ ToolsService ] //Declaration des services du modules
