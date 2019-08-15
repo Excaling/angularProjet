@@ -21,7 +21,7 @@ export class DetailToolComponent implements OnInit {
 	}
 
 	goBack(): void {
-        this.router.navigate(['/tools']); //navigate est mieux que history back
+        this.router.navigate(['/tool/all']); //navigate est mieux que history back
         
         //window.history.back();
 	}

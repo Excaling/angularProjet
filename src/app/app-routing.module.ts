@@ -3,7 +3,7 @@ import { RouterModule, Routes }  from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found.component'
 // routes
 const appRoutes: Routes = [
-	{ path: '', redirectTo: 'tools', pathMatch: 'full' },
+	{ path: '', redirectTo: 'tool/all', pathMatch: 'full' },
 	{ path:'**', component:PageNotFoundComponent }
 ];
 

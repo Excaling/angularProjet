@@ -17,6 +17,8 @@ import { ToolFormComponent } from './tool-form.component';
 import { SearchToolComponent } from './search-tool.component';
 import { LoaderComponent } from '../loader';
 
+import { AuthGuard } from '../auth-guard.service';
+
 
 @NgModule(
     {
@@ -35,9 +37,10 @@ import { LoaderComponent } from '../loader';
             ToolFormComponent, 
             SearchToolComponent,
             LoaderComponent
+            
             ],
 
-        providers: [ ToolsService ] //Declaration des services du modules
+        providers: [ ToolsService,AuthGuard ] //Declaration des services du modules
     }
 )
 export class ToolsModule{}

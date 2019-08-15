@@ -1,8 +1,9 @@
 <nav>
   <div class="nav-wrapper red darken-1">
-    <a href="#" class="brand-logo center">Tools </a>
+    <a href="/tool/all" class="brand-logo center">Tools </a>
   </div>
 </nav>
+<p *ngIf="authService.user">{{authService.user}}</p>
 <router-outlet></router-outlet>
 
 <footer class="page-footer red darken-1"> 
